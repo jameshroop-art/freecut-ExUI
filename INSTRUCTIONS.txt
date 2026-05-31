@@ -1,0 +1,160 @@
+INSTRUCTIONS: AI LOCALHOST PROCESS ORDER (MANDATORY)
+Authoritative sources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/AI-UI-TABS.txt
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/SD-TAB.txt
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/LLAMA-TAB.txt
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/AUDIO-DESCRIPTION-TAB.txt
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/ONNX-SUPPORT-TAB.txt
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/VLC-EMBEDDING.txt
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/WRAPPER-RESEARCH.txt
+
+1) Core AI tab shell + shared contracts/state wiring
+Objective:
+- Establish tab shell and shared local-inference contract/state baseline before any tab-specific implementation.
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/media-sidebar.tsx
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/components/ui/tabs.tsx
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/types.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/store.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/registry.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/local-inference-status-pill.tsx
+Blocked-by dependencies:
+- None (entrypoint step).
+Pass/fail exit criteria:
+- PASS: AI shell includes planned tabs/contracts without removing existing AI panel continuity.
+- FAIL: Missing tab shell wiring, missing shared local-inference contracts, or broken AI entrypoint.
+
+2) ONNX Support diagnostics baseline (provider/compat/helper checks)
+Objective:
+- Stand up diagnostics ownership and runtime-health publication before generation tabs consume status.
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/types.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/store.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/registry.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/local-inference-status-pill.tsx
+- H:\Models-D1\onnx
+- H:\Models-D1\onnxruntime-rs (explicit exception handling only)
+Blocked-by dependencies:
+- Step 1 complete.
+Pass/fail exit criteria:
+- PASS: Provider diagnostics, compatibility checks, helper-ops checks, and runtime health status are available locally.
+- FAIL: Diagnostics cannot publish status or missing ONNX path/provider checks.
+
+3) SD tab sections and local model path validation
+Objective:
+- Configure SD child sections and validate local path readiness for SD generation flows.
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/*
+- L:\SubRoot\...
+- H:\Models-D1\onnx
+- H:\Models-D1\onnxruntime-rs (explicit exception handling only)
+Blocked-by dependencies:
+- Steps 1-2 complete.
+Pass/fail exit criteria:
+- PASS: SD sections (t2i, i2i, t2v, i2v, LoRA, ControlNet, UNet, embeddings, ReActorPlus, VLC review block) are mapped and local paths resolve.
+- FAIL: Any required SD section missing or model path checks unresolved.
+
+4) Llama tab sections with retained TTS/music continuity
+Objective:
+- Add Llama subsections while preserving existing TTS and music-generation behavior.
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/services/kokoro-tts-service.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/services/moss-tts-service.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/services/supertonic-tts-service.ts
+- L:\SubRoot\...
+- H:\Models-D1\onnx
+- H:\Models-D1\onnxruntime-rs (explicit exception handling only)
+Blocked-by dependencies:
+- Steps 1-3 complete.
+Pass/fail exit criteria:
+- PASS: LLM/VLM/NLM/RVC/Piper sections are mapped and existing TTS/music flow remains intact.
+- FAIL: Regression in existing TTS/music features or missing Llama section wiring.
+
+5) Audio Description pipeline sections
+Objective:
+- Add ingestion, understanding, refinement/test loop, review playback, and verification-related submodules.
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/infrastructure/analysis/index.ts
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/infrastructure/analysis/media-tagger.ts
+- L:\SubRoot\...
+- H:\Models-D1\onnx
+- H:\Models-D1\onnxruntime-rs (explicit exception handling only)
+Blocked-by dependencies:
+- Steps 1-4 complete.
+Pass/fail exit criteria:
+- PASS: Audio Description sections are mapped with local-only input/output expectations.
+- FAIL: Any required pipeline section is absent or incompatible with local inference/state conventions.
+
+6) VLC embedded review blocks (scoped only to SD/Llama/optional Audio Description)
+Objective:
+- Add VLC review boundaries as specialized embedded review tooling only, without replacing core editor preview.
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/preview-area.tsx
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/runtime/*
+- VLC embedding wrapper contracts from planning docs.
+Blocked-by dependencies:
+- Steps 1-5 complete.
+Pass/fail exit criteria:
+- PASS: VLC review is limited to SD/Llama/optional Audio Description and editor preview remains primary playback.
+- FAIL: VLC attempts to replace core editor playback or blocks normal preview/timeline UX.
+
+7) Wrapper-gap resolutions from WRAPPER-RESEARCH
+Objective:
+- Resolve documented adapter boundaries and fallback semantics:
+  a) SD adapter boundary
+  b) llama.cpp-rs boundary
+  c) ONNX diagnostics ownership split
+  d) VLC embedding lifecycle/codec/fallback assumptions
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/docs/ai-localhost-map/WRAPPER-RESEARCH.txt
+- Local inference registry/store/status publication surfaces
+- Tab-specific orchestration boundaries in AI panel.
+Blocked-by dependencies:
+- Steps 1-6 complete.
+Pass/fail exit criteria:
+- PASS: Each gap has explicit boundary ownership and fallback behavior documented and mapped to runtime status handling.
+- FAIL: Any gap remains ambiguous or lacks fallback behavior.
+
+8) Handoff validation (media library + timeline insertion)
+Objective:
+- Confirm generated outputs preserve existing save-to-library and save-and-insert conventions.
+Required local paths/resources:
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+- Existing generation history rows, save/import flow, media selection, and timeline insertion behavior.
+Blocked-by dependencies:
+- Steps 1-7 complete.
+Pass/fail exit criteria:
+- PASS: Media library handoff and timeline insertion both succeed for affected tabs.
+- FAIL: Any handoff regression in save/import/timeline placement behavior.
+
+9) Offline/cold-start and restart-persistence validation pass
+Objective:
+- Verify local-only operation under cold start and restart without remote dependencies.
+Required local paths/resources:
+- Local model/cache controls and local filesystem cache/output paths
+- Network-disabled runtime test conditions
+- /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/settings/components/local-model-cache-control.tsx
+Blocked-by dependencies:
+- Steps 1-8 complete.
+Pass/fail exit criteria:
+- PASS: Cold start works offline, local path resolution passes, output writes locally, and restart persistence holds without remote calls.
+- FAIL: Any required behavior depends on network or loses persistence across restart.
+
+10) Failure-state verification matrix
+Objective:
+- Validate and expose required failure states across the sequence.
+Required local paths/resources:
+- Runtime status publication surfaces and tab gating logic
+- Failure-state set: missing model, bad path, runtime unavailable, incompatible provider
+Blocked-by dependencies:
+- Steps 1-9 complete.
+Pass/fail exit criteria:
+- PASS: All four failure states are detectable, surfaced clearly, and aligned with local-only remediation messaging.
+- FAIL: Any failure state is not detectable/surfaced, or allows out-of-order continuation without prerequisites.
+
+DO NOT REORDER:
+This sequence is mandatory. Installing or wiring segments out of order is not permitted and is expected to cause misconfiguration.
