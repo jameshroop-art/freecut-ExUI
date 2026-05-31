@@ -23,3 +23,19 @@ WRAPPER GAP RESEARCH TRACKER
 - Impacted tab(s): SD, Llama, optional Audio Description review.
 - Proposed adapter boundary: per-tab review module -> VLC embedding wrapper -> shared review-state contract.
 - Fallback behavior: automatically use existing editor preview runtime for playback without blocking media library/timeline handoff.
+
+ITERATION TODO NOTES (2026-05-31)
+- Groundwork scaffolds added under /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/ai-adapters:
+  - sd-runtime-adapter.ts
+  - llama-runtime-bridge.ts
+  - onnx-diagnostics-service.ts
+  - vlc-embedding-wrapper.ts
+- Status:
+  - VLC wrapper export + fallback stub: done.
+  - SD/Llama/ONNX adapter boundaries: scaffolded only (no runtime wiring yet).
+- Still needs attention before claiming completion:
+  - Wire SD tab section in ai-panel.tsx to sdRuntimeAdapter contracts.
+  - Wire Llama orchestration to llamaRuntimeBridge while preserving current TTS/music behavior.
+  - Wire ONNX Support tab to onnxDiagnosticsService and publish to local inference status surfaces.
+  - Define persistence + ownership boundaries for diagnostics and provider compatibility probes.
+  - Add runtime path/provider checks and disable/enable behavior per tab based on adapter readiness.
