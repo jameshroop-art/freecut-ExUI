@@ -1,6 +1,7 @@
 Requested file links + addon accommodation notes
 Repository: /tmp/workspace/jameshroop-art/freecut-ExUI
 Pinned commit: 4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e
+Snapshot note: All links in this file are intentionally pinned to the commit above.
 
 Planning-phase commit anchors:
 - 560ee0b9 docs: add ai localhost planning map artifacts
