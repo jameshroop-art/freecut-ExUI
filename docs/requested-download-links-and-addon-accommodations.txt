@@ -1,0 +1,222 @@
+Requested file links + addon accommodation notes
+Repository: /tmp/workspace/jameshroop-art/freecut-ExUI
+Pinned commit: 4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e
+
+Planning-phase commit anchors:
+- 560ee0b9 docs: add ai localhost planning map artifacts
+- 0d123d13 Add ordered root INSTRUCTIONS.txt for AI localhost setup
+- 9d6bc470 chore: scaffold SD/Llama/ONNX ai adapters and update wrapper todo notes
+- d9c8b8ac docs: use relative ai-adapters path in wrapper research notes
+- 56ddb7c0 fix: add vlcEmbeddingWrapper export to src/features/editor/ai-adapters/index.ts
+
+Per-path links and adaptation notes:
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/CHANGELOG.md
+REL_PATH: CHANGELOG.md
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/CHANGELOG.md
+ACCOMMODATION_NOTE: Project documentation context; tracks behavior and release history surrounding AI addon planning and follow-up commits.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/CLAUDE.md
+REL_PATH: CLAUDE.md
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/CLAUDE.md
+ACCOMMODATION_NOTE: Repository baseline file retained; indirectly supports stable integration context for planned addon work.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/INSTRUCTIONS.txt
+REL_PATH: INSTRUCTIONS.txt
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/INSTRUCTIONS.txt
+ACCOMMODATION_NOTE: Applied to enforce the mandatory 10-step localhost order from planning phase commit 0d123d13; prevents addon wiring out-of-order.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/LICENSE
+REL_PATH: LICENSE
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/LICENSE
+ACCOMMODATION_NOTE: Repository baseline file retained; indirectly supports stable integration context for planned addon work.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/README.md
+REL_PATH: README.md
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/README.md
+ACCOMMODATION_NOTE: Project documentation context; tracks behavior and release history surrounding AI addon planning and follow-up commits.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/components.json
+REL_PATH: components.json
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/components.json
+ACCOMMODATION_NOTE: Repository baseline file retained; indirectly supports stable integration context for planned addon work.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless.html
+REL_PATH: headless.html
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless.html
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/index.html
+REL_PATH: index.html
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/index.html
+ACCOMMODATION_NOTE: Repository baseline file retained; indirectly supports stable integration context for planned addon work.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/package-lock.json
+REL_PATH: package-lock.json
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/package-lock.json
+ACCOMMODATION_NOTE: Dependency/script contract used to run validation gates while adapting SD/Llama/ONNX/VLC addon scaffolds.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/package.json
+REL_PATH: package.json
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/package.json
+ACCOMMODATION_NOTE: Dependency/script contract used to run validation gates while adapting SD/Llama/ONNX/VLC addon scaffolds.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/tsconfig.json
+REL_PATH: tsconfig.json
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/tsconfig.json
+ACCOMMODATION_NOTE: Build/runtime configuration baseline preserved to avoid regressions while accommodating planned addon integrations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/tsr.config.json
+REL_PATH: tsr.config.json
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/tsr.config.json
+ACCOMMODATION_NOTE: Build/runtime configuration baseline preserved to avoid regressions while accommodating planned addon integrations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/vercel.json
+REL_PATH: vercel.json
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/vercel.json
+ACCOMMODATION_NOTE: Build/runtime configuration baseline preserved to avoid regressions while accommodating planned addon integrations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/vite.config.ts
+REL_PATH: vite.config.ts
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/vite.config.ts
+ACCOMMODATION_NOTE: Build/runtime configuration baseline preserved to avoid regressions while accommodating planned addon integrations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/docs
+REL_PATH: docs
+DIRECTORY_TREE_LINK: https://github.com/jameshroop-art/freecut-ExUI/tree/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/docs
+ACCOMMODATION_NOTE: Directory containing AI planning artifacts (including ai-localhost-map) used to define addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless
+REL_PATH: headless
+DIRECTORY_TREE_LINK: https://github.com/jameshroop-art/freecut-ExUI/tree/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless
+ACCOMMODATION_NOTE: Directory containing local headless runtime scripts used for offline-compatible media processing accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/public
+REL_PATH: public
+DIRECTORY_TREE_LINK: https://github.com/jameshroop-art/freecut-ExUI/tree/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/public
+ACCOMMODATION_NOTE: Static asset directory that hosts local runtime resources consumed by editor and inference/UI flows.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts
+REL_PATH: scripts
+DIRECTORY_TREE_LINK: https://github.com/jameshroop-art/freecut-ExUI/tree/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts
+ACCOMMODATION_NOTE: Automation/check directory used to enforce boundary and dependency accommodations for planned addon phases.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/src
+REL_PATH: src
+DIRECTORY_TREE_LINK: https://github.com/jameshroop-art/freecut-ExUI/tree/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/src
+ACCOMMODATION_NOTE: Primary source tree where ai-adapters scaffolds (SD/Llama/ONNX/VLC) were added in commit 9d6bc470/56ddb7c0.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/check-feature-boundaries.mjs
+REL_PATH: scripts/check-feature-boundaries.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/check-feature-boundaries.mjs
+ACCOMMODATION_NOTE: Used to keep addon integrations within defined feature/dependency boundaries from the planning contracts.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/report-feature-edges.mjs
+REL_PATH: scripts/report-feature-edges.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/report-feature-edges.mjs
+ACCOMMODATION_NOTE: Used to keep addon integrations within defined feature/dependency boundaries from the planning contracts.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/changelog-append.mjs
+REL_PATH: scripts/changelog-append.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/changelog-append.mjs
+ACCOMMODATION_NOTE: Operational utility script; supports repeatable validation/build hygiene while addon accommodations are integrated incrementally.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/check-legacy-lib-imports.mjs
+REL_PATH: scripts/check-legacy-lib-imports.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/check-legacy-lib-imports.mjs
+ACCOMMODATION_NOTE: Operational utility script; supports repeatable validation/build hygiene while addon accommodations are integrated incrementally.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/check-deps-contract-boundaries.mjs
+REL_PATH: scripts/check-deps-contract-boundaries.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/check-deps-contract-boundaries.mjs
+ACCOMMODATION_NOTE: Adapted as guardrails that support addon boundary accommodation checks noted in WRAPPER-RESEARCH (commit 9d6bc470).
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/changelog-rollup.mjs
+REL_PATH: scripts/changelog-rollup.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/changelog-rollup.mjs
+ACCOMMODATION_NOTE: Operational utility script; supports repeatable validation/build hygiene while addon accommodations are integrated incrementally.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/check-feature-edge-budgets.mjs
+REL_PATH: scripts/check-feature-edge-budgets.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/check-feature-edge-budgets.mjs
+ACCOMMODATION_NOTE: Used to keep addon integrations within defined feature/dependency boundaries from the planning contracts.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/run-dev-and-perf.mjs
+REL_PATH: scripts/run-dev-and-perf.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/run-dev-and-perf.mjs
+ACCOMMODATION_NOTE: Operational utility script; supports repeatable validation/build hygiene while addon accommodations are integrated incrementally.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/check-deps-wrapper-health.mjs
+REL_PATH: scripts/check-deps-wrapper-health.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/check-deps-wrapper-health.mjs
+ACCOMMODATION_NOTE: Adapted as guardrails that support addon boundary accommodation checks noted in WRAPPER-RESEARCH (commit 9d6bc470).
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/preview-sync-stress.mjs
+REL_PATH: scripts/preview-sync-stress.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/preview-sync-stress.mjs
+ACCOMMODATION_NOTE: Operational utility script; supports repeatable validation/build hygiene while addon accommodations are integrated incrementally.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/scripts/fix-mojibake.py
+REL_PATH: scripts/fix-mojibake.py
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/scripts/fix-mojibake.py
+ACCOMMODATION_NOTE: Operational utility script; supports repeatable validation/build hygiene while addon accommodations are integrated incrementally.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/render.mjs
+REL_PATH: headless/render.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/render.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/edit.mjs
+REL_PATH: headless/edit.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/edit.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/serve.mjs
+REL_PATH: headless/serve.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/serve.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/test.mjs
+REL_PATH: headless/test.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/test.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/server.mjs
+REL_PATH: headless/server.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/server.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/smoke.mjs
+REL_PATH: headless/smoke.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/smoke.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/probe.mjs
+REL_PATH: headless/probe.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/probe.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/media-server.mjs
+REL_PATH: headless/media-server.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/media-server.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/media-smoke.mjs
+REL_PATH: headless/media-smoke.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/media-smoke.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/lib/cli.mjs
+REL_PATH: headless/lib/cli.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/lib/cli.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/lib/render-core.mjs
+REL_PATH: headless/lib/render-core.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/lib/render-core.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
+
+ABS_PATH: /tmp/workspace/jameshroop-art/freecut-ExUI/headless/lib/workspace.mjs
+REL_PATH: headless/lib/workspace.mjs
+DIRECT_DOWNLOAD_LINK: https://raw.githubusercontent.com/jameshroop-art/freecut-ExUI/4e5c9a99aa1fa9b83a9216e00ba783224ec1a83e/headless/lib/workspace.mjs
+ACCOMMODATION_NOTE: Headless render/edit harness used as local runtime surface compatible with planned offline/local-only addon accommodations.
