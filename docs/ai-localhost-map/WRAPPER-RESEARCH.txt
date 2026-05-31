@@ -25,7 +25,7 @@ WRAPPER GAP RESEARCH TRACKER
 - Fallback behavior: automatically use existing editor preview runtime for playback without blocking media library/timeline handoff.
 
 ITERATION TODO NOTES (2026-05-31)
-- Groundwork scaffolds added under /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/ai-adapters:
+- Groundwork scaffolds added under src/features/editor/ai-adapters:
   - sd-runtime-adapter.ts
   - llama-runtime-bridge.ts
   - onnx-diagnostics-service.ts
