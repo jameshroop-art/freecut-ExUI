@@ -2,6 +2,7 @@ import { useMediaLibraryStore } from '@/features/media-library/stores/media-libr
 import { proxyService } from '@/features/media-library/services/proxy-service'
 import { getSharedProxyKey } from '@/features/media-library/utils/proxy-key'
 import { blobUrlManager } from '@/infrastructure/browser/blob-url-manager'
+import { validateMediaHandle } from '@/infrastructure/storage'
 import { registerKeyframeIndex } from '@/shared/utils/keyframe-index-registry'
 import type { TimelineTrack } from '@/types/timeline'
 import { createLogger } from '@/shared/logging/logger'
@@ -47,9 +48,19 @@ export async function resolveMediaUrl(mediaId: string): Promise<string> {
         return '' // Fallback: empty string (Composition will skip)
       }
 
-      // Get the source blob without an extra validation pass; getMediaFile
-      // surfaces permission/missing-file errors with the same relink UI.
-      const blob = await mediaLibraryService.getMediaFile(media)
+      if (media.storageType === 'handle') {
+        const validation = await validateMediaHandle(mediaId)
+        if (validation.kind !== 'ok' && validation.kind !== 'no-handle') {
+          useMediaLibraryStore.getState().markMediaBroken(mediaId, {
+            mediaId,
+            fileName: media.fileName,
+            errorType: validation.kind === 'permission' ? 'permission_denied' : 'file_missing',
+          })
+          return ''
+        }
+      }
+
+      const blob = await mediaLibraryService.getMediaFile(mediaId)
 
       if (!blob) {
         logger.warn(`Media blob not found: ${mediaId}`)
