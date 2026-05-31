@@ -1,0 +1,46 @@
+TAB_NAME: SD
+HOST_COMPONENT: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+CHILD_SECTIONS:
+- t2i
+- i2i
+- t2v
+- i2v
+- LoRA
+- ControlNet
+- UNet
+- embeddings
+- ReActorPlus
+- VLC review block (specialized embedded review only)
+LOCALHOST_DEPENDENCIES:
+- Local inference contracts/state: /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/types.ts, /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/store.ts, /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/registry.ts.
+- Runtime status exposure aligns with: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/local-inference-status-pill.tsx.
+- Additional resources: C:\LLVM, C:\ninja, %windir%\System32\cmd.exe /K path C:\Program Files\Rust stable MSVC 1.94\bin;%PATH%.
+MODEL_PATHS:
+- Local-only model/checkpoint roots under L:\SubRoot\... and H:\Models-D1\onnx.
+- If onnxruntime-rs helpers are used, document explicit exception behavior for H:\Models-D1\onnxruntime-rs.
+INPUT_TYPES:
+- Text prompts.
+- Optional source images/videos for img2img/img2vid.
+- Local adapter/control references.
+OUTPUT_TYPES:
+- Generated images/videos.
+- Local runtime descriptors/health snapshots.
+MEDIA_LIBRARY_HANDOFF:
+- Follow existing AI generation save-to-library pattern used in ai-panel.tsx.
+TIMELINE_HANDOFF:
+- Follow existing save-and-insert timeline flow conventions used in ai-panel.tsx.
+CACHE_AND_STORAGE:
+- Local model/cache storage only.
+- No remote pulls during active runtime.
+VALIDATION:
+- Cold start with network disabled.
+- Local model path resolution pass/fail.
+- Output written to local workspace.
+- Restart persistence without remote calls.
+- Media library handoff success.
+- Timeline insertion success.
+FAILURE_STATES:
+- Missing model.
+- Bad path.
+- Runtime unavailable.
+- Incompatible provider.

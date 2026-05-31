@@ -1,0 +1,44 @@
+TAB_NAME: AI-UI-TABS
+HOST_COMPONENT: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+CHILD_SECTIONS:
+- Second-level tabs planned inside ai-panel.tsx only: SD, Llama, Audio Description, ONNX Support.
+- Existing Text-to-Speech remains available and is mapped under Llama.
+- Existing Music generation remains intact under the expanded tab structure.
+- Duplicate mentions rule: any duplicated operation mention for a new tab remains required for that tab and is not dropped.
+- Consolidation rule: duplicated Llama mentions are consolidated into one Llama tab now; optional future split to a dedicated Voice tab only on explicit future request.
+LOCALHOST_DEPENDENCIES:
+- Parent rail remains unchanged: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/media-sidebar.tsx (media, text, shapes, effects, transitions, ai).
+- AI entrypoint remains existing lazy import (LazyAiPanel) in media-sidebar.tsx.
+- Tabs primitive: /tmp/workspace/jameshroop-art/freecut-ExUI/src/components/ui/tabs.tsx.
+- Runtime status UI: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/local-inference-status-pill.tsx.
+- Model/cache settings: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/settings/components/local-model-cache-control.tsx.
+- Runtime contracts: /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/types.ts, /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/store.ts, /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/registry.ts.
+- Additional resources: C:\LLVM, C:\ninja, %windir%\System32\cmd.exe /K path C:\Program Files\Rust stable MSVC 1.94\bin;%PATH%.
+MODEL_PATHS:
+- Local filesystem only.
+- Win11 roots tracked for planning: L:\SubRoot\..., H:\Models-D1\onnx, H:\Models-D1\onnxruntime-rs (explicit exception notes required where used).
+INPUT_TYPES:
+- Prompt text, media asset selections, optional image/video/audio inputs per tab.
+- Local status/settings input from local inference state.
+OUTPUT_TYPES:
+- Generated audio/image/video artifacts.
+- Runtime diagnostics and compatibility/support state.
+MEDIA_LIBRARY_HANDOFF:
+- Preserve existing ai-panel save-to-library flow and metadata conventions.
+TIMELINE_HANDOFF:
+- Preserve existing ai-panel save-and-insert and timeline placement conventions.
+CACHE_AND_STORAGE:
+- Use local model cache controls and local filesystem cache only.
+- Preserve restart persistence expectations without remote calls.
+VALIDATION:
+- Cold start with network disabled.
+- Local model path resolution pass/fail.
+- Output written to local workspace.
+- Restart persistence without remote calls.
+- Media library handoff success.
+- Timeline insertion success.
+FAILURE_STATES:
+- Missing model.
+- Bad path.
+- Runtime unavailable.
+- Incompatible provider.

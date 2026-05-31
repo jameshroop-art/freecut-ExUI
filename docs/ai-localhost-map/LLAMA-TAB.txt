@@ -1,0 +1,49 @@
+TAB_NAME: Llama
+HOST_COMPONENT: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+CHILD_SECTIONS:
+- LLM
+- VLM
+- NLM
+- RVC
+- Piper
+- Text-to-Speech (retained)
+- Music generation continuity hooks
+- VLC review block (specialized embedded review only)
+LOCALHOST_DEPENDENCIES:
+- Explicit retained TTS services:
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/services/kokoro-tts-service.ts
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/services/moss-tts-service.ts
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/services/supertonic-tts-service.ts
+- Existing ai-panel generation history rows, save/import flow, media selection, and timeline insertion conventions remain unchanged.
+- Runtime/status integration via local inference state + status pill patterns.
+- Additional resources: C:\LLVM, C:\ninja, %windir%\System32\cmd.exe /K path C:\Program Files\Rust stable MSVC 1.94\bin;%PATH%.
+MODEL_PATHS:
+- Local filesystem only; map to L:\SubRoot\... and H:\Models-D1\onnx as applicable.
+- H:\Models-D1\onnxruntime-rs allowed only with explicit documented exception notes.
+INPUT_TYPES:
+- Prompt text.
+- Optional media context inputs for multimodal inference.
+- Current TTS prompt/voice/speed/style controls from ai-panel.tsx.
+OUTPUT_TYPES:
+- Text responses.
+- Audio generations (Kokoro/MOSS/Supertonic) and music generation outputs preserved.
+- Local runtime diagnostics.
+MEDIA_LIBRARY_HANDOFF:
+- Preserve current save-to-library behavior in ai-panel.tsx for generated audio/media.
+TIMELINE_HANDOFF:
+- Preserve current save-and-insert timeline flow in ai-panel.tsx.
+CACHE_AND_STORAGE:
+- Local caches/models only.
+- Offline operation supported.
+VALIDATION:
+- Cold start with network disabled.
+- Local model path resolution pass/fail.
+- Output written to local workspace.
+- Restart persistence without remote calls.
+- Media library handoff success.
+- Timeline insertion success.
+FAILURE_STATES:
+- Missing model.
+- Bad path.
+- Runtime unavailable.
+- Incompatible provider.

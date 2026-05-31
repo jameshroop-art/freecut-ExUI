@@ -1,0 +1,44 @@
+TAB_NAME: Audio Description
+HOST_COMPONENT: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+CHILD_SECTIONS:
+- ingestion
+- scene understanding
+- refinement loop
+- test loop
+- review playback
+- captioning/embeddings/verification submodules
+- optional VLC review block (specialized embedded review only)
+LOCALHOST_DEPENDENCIES:
+- Analysis integration targets:
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/infrastructure/analysis/index.ts
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/infrastructure/analysis/media-tagger.ts
+- Runtime status exposure follows local inference state + status pill patterns.
+- Additional resources: C:\LLVM, C:\ninja, %windir%\System32\cmd.exe /K path C:\Program Files\Rust stable MSVC 1.94\bin;%PATH%.
+MODEL_PATHS:
+- Local-only model/data roots: L:\SubRoot\..., H:\Models-D1\onnx.
+- H:\Models-D1\onnxruntime-rs only where explicitly documented as an exception.
+INPUT_TYPES:
+- Local media assets (video/audio).
+- Prompt/annotation/refinement instructions.
+OUTPUT_TYPES:
+- Audio description text/audio artifacts.
+- Verification and confidence diagnostics.
+MEDIA_LIBRARY_HANDOFF:
+- Follow existing media library save pattern used by ai-panel generation flows.
+TIMELINE_HANDOFF:
+- Follow existing ai-panel insertion conventions for generated assets.
+CACHE_AND_STORAGE:
+- Local temporary/cache/output storage only.
+- Offline operation supported.
+VALIDATION:
+- Cold start with network disabled.
+- Local model path resolution pass/fail.
+- Output written to local workspace.
+- Restart persistence without remote calls.
+- Media library handoff success.
+- Timeline insertion success.
+FAILURE_STATES:
+- Missing model.
+- Bad path.
+- Runtime unavailable.
+- Incompatible provider.
