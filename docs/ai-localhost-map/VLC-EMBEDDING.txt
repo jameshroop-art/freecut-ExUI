@@ -1,0 +1,8 @@
+VLC EMBEDDING PLANNING BOUNDARY
+- Scope VLC embedding blocks to SD, Llama, and optional Audio Description review only.
+- Keep editor preview runtime as primary playback:
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/preview-area.tsx
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/runtime/*
+- VLC is documented as fully enabled OSS/full-codec specialized embedded review tooling.
+- VLC is not an editor-core playback replacement.
+- Preserve existing preview and timeline UX contracts.

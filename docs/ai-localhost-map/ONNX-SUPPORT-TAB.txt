@@ -1,0 +1,44 @@
+TAB_NAME: ONNX Support
+HOST_COMPONENT: /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/ai-panel.tsx
+CHILD_SECTIONS:
+- provider diagnostics
+- compatibility checks
+- helper ops checks
+- runtime health
+- status exposure surfaces
+LOCALHOST_DEPENDENCIES:
+- Connect diagnostics/support status to:
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/types.ts
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/store.ts
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/shared/state/local-inference/registry.ts
+  - /tmp/workspace/jameshroop-art/freecut-ExUI/src/features/editor/components/local-inference-status-pill.tsx
+- Additional resources: C:\LLVM, C:\ninja, %windir%\System32\cmd.exe /K path C:\Program Files\Rust stable MSVC 1.94\bin;%PATH%.
+MODEL_PATHS:
+- Diagnostics target local model/provider roots under H:\Models-D1\onnx.
+- H:\Models-D1\onnxruntime-rs tracked with explicit exception notes.
+INPUT_TYPES:
+- Local runtime/provider metadata.
+- Local model path declarations and compatibility targets.
+OUTPUT_TYPES:
+- Provider support matrices.
+- Compatibility/failure diagnostics.
+- Local runtime health state.
+MEDIA_LIBRARY_HANDOFF:
+- Not a direct generation surface; provides diagnostics that gate generation tabs.
+TIMELINE_HANDOFF:
+- Not a direct insertion surface; status informs insertion eligibility indirectly.
+CACHE_AND_STORAGE:
+- Local logs/cache/state only.
+- No remote dependency.
+VALIDATION:
+- Cold start with network disabled.
+- Local model path resolution pass/fail.
+- Output written to local workspace.
+- Restart persistence without remote calls.
+- Media library handoff success criteria delegated to generation tabs.
+- Timeline insertion success criteria delegated to generation tabs.
+FAILURE_STATES:
+- Missing model.
+- Bad path.
+- Runtime unavailable.
+- Incompatible provider.

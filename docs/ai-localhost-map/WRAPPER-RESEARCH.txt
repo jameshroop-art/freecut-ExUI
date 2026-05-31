@@ -1,0 +1,25 @@
+WRAPPER GAP RESEARCH TRACKER
+
+1) Gap: SD adapters
+- Blocker: no finalized adapter boundary between planned SD tab contracts and local runtime provider wrappers.
+- Impacted tab(s): SD.
+- Proposed adapter boundary: ai-panel SD tab section -> local-inference registry contract descriptors -> provider-specific adapter layer.
+- Fallback behavior: surface runtime unavailable/incompatible provider states and disable generate actions with local-only remediation messaging.
+
+2) Gap: llama.cpp-rs boundary
+- Blocker: unresolved boundary between Llama tab orchestration and llama.cpp-rs runtime integration responsibilities.
+- Impacted tab(s): Llama.
+- Proposed adapter boundary: Llama tab orchestration -> unified inference request contract -> llama.cpp-rs bridge module.
+- Fallback behavior: retain existing TTS and music generation paths; mark unavailable Llama runtime features without regressing current ai-panel behavior.
+
+3) Gap: ONNX diagnostics boundary
+- Blocker: final ownership split for provider diagnostics, compatibility probes, helper-ops checks, and persistence.
+- Impacted tab(s): ONNX Support (and SD/Llama/Audio Description indirectly).
+- Proposed adapter boundary: ONNX Support tab -> diagnostics service -> local inference store/registry status publication.
+- Fallback behavior: expose degraded status with explicit local path/provider errors and keep non-dependent UI controls enabled.
+
+4) Gap: VLC embedding assumptions
+- Blocker: assumptions around embedding lifecycle, codec support variance, and cross-platform fallback semantics are not yet formalized.
+- Impacted tab(s): SD, Llama, optional Audio Description review.
+- Proposed adapter boundary: per-tab review module -> VLC embedding wrapper -> shared review-state contract.
+- Fallback behavior: automatically use existing editor preview runtime for playback without blocking media library/timeline handoff.
