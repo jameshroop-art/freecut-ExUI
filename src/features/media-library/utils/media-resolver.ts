@@ -86,12 +86,20 @@ export async function resolveMediaUrl(mediaId: string): Promise<string> {
       logger.error(`Failed to resolve media ${mediaId}:`, error)
 
       // Mark media as broken if it's a file access error
-      if (error instanceof FileAccessError) {
+      const isFileAccessError =
+        error instanceof FileAccessError ||
+        (error instanceof Error &&
+          error.name === 'FileAccessError' &&
+          'type' in error &&
+          (error as { type: unknown }).type !== undefined)
+
+      if (isFileAccessError) {
+        const fileAccessType = (error as { type?: string }).type
         const media = await mediaLibraryService.getMedia(mediaId)
         useMediaLibraryStore.getState().markMediaBroken(mediaId, {
           mediaId,
           fileName: media?.fileName ?? 'Unknown file',
-          errorType: error.type === 'permission_denied' ? 'permission_denied' : 'file_missing',
+          errorType: fileAccessType === 'permission_denied' ? 'permission_denied' : 'file_missing',
         })
       }
 
